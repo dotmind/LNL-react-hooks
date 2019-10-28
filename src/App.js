@@ -4,6 +4,7 @@ import { Typography, Divider, Select } from 'antd';
 import './App.css';
 import SendStateLess from './components/SendStateless';
 import SendClass from './components/SendClass';
+import SendClassFixed from './components/SendClassFixed';
 
 const items = [
   'David',
@@ -43,10 +44,11 @@ class App extends Component {
     return (
       <div className="App">
         {this._renderSelect()}
-        <Typography.Title>Profile de {item}</Typography.Title>
+        <Typography.Title>Profil de {item}</Typography.Title>
         <Divider />
         <p><SendStateLess item={item} /></p>
         <p><SendClass item={item} /></p>
+        <p><SendClassFixed item={item} /></p>
       </div>
     );
   }
